@@ -12,6 +12,23 @@
       <div class="row">
         <div class="col-md-12">
           <div class="page-header">
+            <h1>Tooltips</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <a href="#" title="Soy un Tooltip">Prueba</a><br>
+          <a href="#" title="Soy un Tooltip">Prueba</a><br>
+          <a href="#" title="Soy un Tooltip">Prueba</a><br>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
             <h1>Tabs</h1>
           </div>
         </div>
@@ -1017,6 +1034,16 @@
               <script src="js/bootstrap.js"></script>
               <script>
               $().ready(function(){
+                //inicio clase 29
+                //a todos los enlaces "a" le asignamos el tooltip
+                //
+                $("a").tooltip({
+                  //usamos placement para ubicar el tooltip (arriba, abajo,izq, der)
+                  placement:"right",
+                });
+                //fin clase 29
+
+                //inicio clase 27
                 setTimeout(function(){
                   $("#Mi_Modal").modal("show");
                 },2000);
@@ -1041,6 +1068,7 @@
                 $("#Mi_Modal").on("shown.bs.modal", function(){
                   console.log("Termine de mostrar");
                 });
+                //final clase 27
               });
               </script>
             </div>
