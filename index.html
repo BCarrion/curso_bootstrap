@@ -952,6 +952,34 @@
             <div class="">
               <script src="js/jquery.js"></script>
               <script src="js/bootstrap.js"></script>
+              <script>
+              $().ready(function(){
+                setTimeout(function(){
+                  $("#Mi_Modal").modal("show");
+                },2000);
+                setTimeout(function(){
+                  $("#Mi_Modal").modal("hide");
+                },4000);
+                setTimeout(function(){
+                  $("#Mi_Modal").modal("toggle");
+                },5000);
+                setTimeout(function(){
+                  $("#Mi_Modal").modal("toggle");
+                },6000);
+                $("#Mi_Modal").on("hide.bs.modal", function(){
+                  console.log("Estoy Ocultando");
+                });
+                $("#Mi_Modal").on("hidden.bs.modal", function(){
+                  console.log("Me termine de ocultar");
+                });
+                $("#Mi_Modal").on("show.bs.modal", function(){
+                  console.log("Estoy Mostrando");
+                });
+                $("#Mi_Modal").on("shown.bs.modal", function(){
+                  console.log("Termine de mostrar");
+                });
+              });
+              </script>
             </div>
           </body>
           </html>
