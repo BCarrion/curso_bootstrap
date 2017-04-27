@@ -12,6 +12,21 @@
       <div class="row">
         <div class="col-md-12">
           <div class="page-header">
+            <h1>Popover</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <a href="#" class="btn btn-info Mi_Pop">Popover</a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
             <h1>Tooltips</h1>
           </div>
         </div>
@@ -1034,6 +1049,15 @@
               <script src="js/bootstrap.js"></script>
               <script>
               $().ready(function(){
+                //Inicio clase 30
+                $(".Mi_Pop").popover({
+                  placement: "rigth",
+                  title: "Titulo del Popover",
+                  content: "Popover Popover <strong>Popover</strong> Popover Popover",
+                  html: true,
+                });
+                //Fin clase 30
+
                 //inicio clase 29
                 //a todos los enlaces "a" le asignamos el tooltip
                 //
