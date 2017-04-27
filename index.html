@@ -1049,24 +1049,6 @@
               <script src="js/bootstrap.js"></script>
               <script>
               $().ready(function(){
-                //Inicio clase 30
-                $(".Mi_Pop").popover({
-                  placement: "rigth",
-                  title: "Titulo del Popover",
-                  content: "Popover Popover <strong>Popover</strong> Popover Popover",
-                  html: true,
-                });
-                //Fin clase 30
-
-                //inicio clase 29
-                //a todos los enlaces "a" le asignamos el tooltip
-                //
-                $("a").tooltip({
-                  //usamos placement para ubicar el tooltip (arriba, abajo,izq, der)
-                  placement:"right",
-                });
-                //fin clase 29
-
                 //inicio clase 27
                 setTimeout(function(){
                   $("#Mi_Modal").modal("show");
@@ -1093,6 +1075,49 @@
                   console.log("Termine de mostrar");
                 });
                 //final clase 27
+                //inicio clase 29
+                //a todos los enlaces "a" le asignamos el tooltip
+                //
+                $("a").tooltip({
+                  //usamos placement para ubicar el tooltip (arriba, abajo,izq, der)
+                  placement:"right",
+                });
+                //fin clase 29
+                //Inicio clase 30
+                $(".Mi_Pop").popover({
+                  placement: "rigth",
+                  title: "Titulo del Popover",
+                  content: "Popover Popover <strong>Popover</strong> Popover Popover",
+                  html: true,
+                });
+                //Fin clase 30
+                //inicio clase 31
+                setTimeout(function(){
+                  $(".Mi_Pop").popover("show");
+                },8000);
+                setTimeout(function(){
+                  $(".Mi_Pop").popover("hide");
+                },10000);
+                setTimeout(function(){
+                  $(".Mi_Pop").popover("toggle");
+                },12000);
+                setTimeout(function(){
+                  $(".Mi_Pop").popover("destroy");
+                },14000);
+
+                $(".Mi_Pop").on("show.bs.popover", function(){
+                  console.log("Mostrando");
+                });
+                $(".Mi_Pop").on("hide.bs.popover", function(){
+                  console.log("Ocultando");
+                });
+                $(".Mi_Pop").on("toggle.bs.popover", function(){
+                  console.log("Mostrando u Ocultando segun estado previo");
+                });
+                $(".Mi_Pop").on("destroy.bs.popover", function(){
+                  console.log("Destruyendo");
+                });
+                //fin clase 31
               });
               </script>
             </div>
