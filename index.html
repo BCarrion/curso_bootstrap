@@ -17,6 +17,7 @@
         </div>
       </div>
       <div class="row">
+        <a id="operar" href="#" type="button" class="btn btn-info">Operar Slide</a>
         <div class="col-md-3">&nbsp;</div>
         <div class="col-md-6">
           <div class="col-md-3">&nbsp;</div>
@@ -32,12 +33,24 @@
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <img src="img/carousel_1.jpg" alt="...">
+                  <div class="carousel-caption">
+                    <h6>Titulo del slide</h6>
+                    contenido del slide
+                  </div>
                 </div>
                 <div class="item">
                   <img src="img/carousel_2.jpg" alt="...">
+                  <div class="carousel-caption">
+                    <h6>Titulo del slide</h6>
+                    contenido del slide
+                  </div>
                 </div>
                 <div class="item">
                   <img src="img/carousel_3.jpg" alt="...">
+                  <div class="carousel-caption">
+                    <h6>Titulo del slide</h6>
+                    contenido del slide
+                  </div>
                 </div>
               </div>
               <!-- Controls -->
@@ -1256,6 +1269,26 @@
                   console.log("Destruyendo");
                 });
                 //fin clase 31
+                //inicio clase 35
+                $("#Mi_Slide").carousel({
+                  interval: 10000,
+                  pause: "hover",
+                });
+                $("#operar").on("click", function(e){
+                  e.preventDefault();
+                  $("#Mi_Slide").carousel("next");
+                  //$("#Mi_Slide").carousel("prev");
+                  //$("#Mi_Slide").carousel(2); ir directo a un slide
+                  //$("#Mi_Slide").carousel("pause");
+                });
+
+                $("#Mi_Slide").on("slide.bs.carousel", function(){
+                  console.log("Se ha invocado un slide");
+                });
+                $("#Mi_Slide").on("slid.bs.carousel", function(){
+                  console.log("Ha terminado el slide");
+                });
+                //fin clase 35
               });
               </script>
             </div>
