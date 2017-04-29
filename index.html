@@ -1271,7 +1271,7 @@
                 //fin clase 31
                 //inicio clase 35
                 $("#Mi_Slide").carousel({
-                  interval: 10000,
+                  interval: 5000,
                   pause: "hover",
                 });
                 $("#operar").on("click", function(e){
@@ -1288,6 +1288,11 @@
                 $("#Mi_Slide").on("slid.bs.carousel", function(){
                   console.log("Ha terminado el slide");
                 });
+
+                setTimeout(function(){
+                  $("#Mi_Slide").carousel("pause");
+                  console.log("Pause el Slide");
+                },20000);
                 //fin clase 35
               });
               </script>
